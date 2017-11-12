@@ -20,10 +20,10 @@ public class Principal {
      * Algoritmo multiplicacao de matrizes página 56 Cormen 3ed.
      *
      * @param A Matriz A
-     * @param B Matriz
+     * @param B Matriz B
      * @return Uma matriz com o resultado da multiplicação da matriz A por B
      */
-    public static int[][] multiplicacaoMatriz(int A[][], int B[][]) {
+    public static int[][] multiplica(int A[][], int B[][]) {
         //Numero de colunas de A diferente do numero de linhas de B
         //A.columns != B.rows
         if (A.length != B[0].length) {
@@ -47,7 +47,7 @@ public class Principal {
 
     /**
      * Minimo Multiplicações Cadeia de Matrizes utilizando recursividade.
-     * @param b 
+     * @param b Vetor com dimensòes das matrizes
      */
     public static int minimoMultiplicacoesRecursivo(int b[], int i, int j) {
         if (i == j) {
@@ -72,7 +72,8 @@ public class Principal {
 
     /**
      * Minimo Multiplicações Cadeia de Matrizes utilizando programação dinâmica.
-     * @param b 
+     * Saída as tabelas m e s preenchidas
+     * @param b Vetor com dimensòes das matrizes
      */
     public static void minimoMultiplicacoes(int b[]) {
         // numero de matrizes a serem multiplicadas
@@ -159,8 +160,13 @@ public class Principal {
         int i = 0;
         int j = n - 1;
         minimoMultiplicacoes(b);
+        
         //minimoMultiplicacoesRecursivo(b, i, j);
         System.out.println(imprimaParentizacaoOtima(s, i, j));
+        
+        
+        
+        
     }
 
 }

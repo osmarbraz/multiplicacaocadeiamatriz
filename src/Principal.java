@@ -17,21 +17,21 @@ public class Principal {
     static int s[][];
 
     /**
-     * Algoritmo multiplicacao de matrizes página 56 Cormen 3ed.
+     * Algoritmo multiplicacao de matrizes página 56 Thomas H. Cormen 3ed.
      *
      * @param A Matriz A
      * @param B Matriz B
      * @return Uma matriz com o resultado da multiplicação da matriz A por B
      */
     public static int[][] multiplica(int A[][], int B[][]) {
-        //Numero de colunas de A diferente do numero de linhas de B
+        //Número de colunas de A diferente do número de linhas de B
         //A.columns != B.rows
         if (A.length != B[0].length) {
             System.out.println("Tipos incompátiveis");
             return null;
         } else {
-            int linha = A[0].length; //A.rows, numero de linhas da matriz A
-            int coluna = B.length; //B.columns, numero de colunas da matriz B
+            int linha = A[0].length; //A.rows, número de linhas da matriz A
+            int coluna = B.length; //B.columns, número de colunas da matriz B
             int C[][] = new int[linha][coluna];
             for (int i = 0; i < linha; i++) {
                 for (int j = 0; j < coluna; j++) {
@@ -57,7 +57,7 @@ public class Principal {
             m[i][j] = Integer.MAX_VALUE;
             for (int k = i; k <= j -1; k++) {                              
                  //Varios valores da árvore de recursão ja foram calculados e sao trazidos de m
-                 //obtencao de m[i,j] por meio de solução de recursão: passo 2 pag.374 livro Cormen 
+                 //obtencao de m[i,j] por meio de solução de recursão: passo 2 pag.374 livro Thomas H. Cormen 
                 int q = minimoMultiplicacoesRecursivo(b, i, k) + 
                         minimoMultiplicacoesRecursivo(b, k+1, j) + 
                         b[i] * b[k] * b[j];                
@@ -76,9 +76,9 @@ public class Principal {
      * @param b Vetor com dimensòes das matrizes
      */
     public static void minimoMultiplicacoes(int b[]) {
-        // numero de matrizes a serem multiplicadas
+        // número de matrizes a serem multiplicadas
         int n = b.length - 1;
-        //salva em m[i,i] o numero de operacoes com uma unica matriz = 0
+        //salva em m[i,i] o número de operacoes com uma unica matriz = 0
         for (int i = 0; i <= n; i++) {
             m[i][i] = 0;
         }
@@ -123,7 +123,7 @@ public class Principal {
     }
 
     /**
-     * Imprime na saida padrão a matriz 
+     * Imprime na saída padrão a matriz 
      * @param X Uma matriz a ser exibida
      */
     public static void imprimir(int[][] X) {

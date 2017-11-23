@@ -149,8 +149,13 @@ public class Principal {
         //imprimir(B);
         //int[][] C = multiplicacaoMatriz(A, B);
         //imprimir(C);
+        
         int b[] = {35, 15, 5, 10, 20, 25};
+        //Matriz (35x15),(15x5),(5x10)(10x20),(20x25)
+        
         //int b[] = {200, 2, 30, 20, 5};
+        //Matriz (200x2),(2x30),(30x20)(20x5)
+        
         int n = b.length;
         m = new int[n][n];
         s = new int[n][n];
@@ -160,13 +165,11 @@ public class Principal {
         int i = 0;
         int j = n - 1;
         minimoMultiplicacoes(b);
-        
+                
+        System.out.println("Matriz m:");
+        imprimir(m);
+                
         //minimoMultiplicacoesRecursivo(b, i, j);
-        System.out.println(imprimaParentizacaoOtima(s, i, j));
-        
-        
-        
-        
+        System.out.println("Parentização:" + imprimaParentizacaoOtima(s, i, j));
     }
-
 }
